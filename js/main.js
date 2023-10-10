@@ -73,7 +73,7 @@ document.getElementById('sendInfo').addEventListener('click', () => {
     formData.append('x', x)
     formData.append('y', y)
     formData.append('r', r)
-    fetch('/server.php', {body: formData, method: 'POST'}).then(res => {
+    fetch('server.php', {body: formData, method: 'POST'}).then(res => {
         res.text().then(data=>{
             document.getElementById('result').innerHTML = data
             console.log(data);
